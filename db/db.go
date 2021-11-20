@@ -1,6 +1,9 @@
 package main
 
 import (
+	"errors"
+	"strings"
+
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -14,6 +17,14 @@ type Product struct {
 
 func insert(db *gorm.DB, product *Product) error  {
     return db.Create(product).Error
+}
+
+// insertProductWithCondition inserts product that has name prefix is `test` and price is greater than 100.
+func insertProductWithCondition(db *gorm.DB, product *Product) error {
+    if strings.HasPrefix(product.Name, "test") && product.Price > 100 {
+        return db.Create(product).Error
+    }
+    return errors.New("invalid product data")
 }
 
 func main() {
