@@ -38,7 +38,7 @@ func TestCirlce_Area(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 	}
-    t.Helper()
+	t.Helper()
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			circle := Cirlce{
@@ -52,7 +52,7 @@ func TestCirlce_Area(t *testing.T) {
 }
 
 func TestArea(t *testing.T) {
-  type args struct {
-    r Rectangle
-  }
+	type args struct {
+		r Rectangle
+	}
 }

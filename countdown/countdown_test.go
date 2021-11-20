@@ -6,15 +6,15 @@ import (
 )
 
 func TestCountDown(t *testing.T) {
-    buffer := &bytes.Buffer{}
+	buffer := &bytes.Buffer{}
 
-    CountDown(buffer)
+	CountDown(buffer)
 
-    got := buffer.String()
+	got := buffer.String()
 
-    want := "3"
+	want := "3"
 
-    if got != want {
-        t.Errorf("got %q want %q", got, want)
-      }
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
 }

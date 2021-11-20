@@ -14,16 +14,18 @@ func hello(name string) string {
 }
 
 func welcome(w http.ResponseWriter, r *http.Request) {
-  w.Header().Set("Content-Type", "application/json")
-  fmt.Fprintln(w, "Hello world")
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Fprintln(w, "Hello world")
 }
 
 func New(a string) string {
-  return a
+	return a
 }
 
 func main() {
-  http.HandleFunc("/", welcome)
-
-  http.ListenAndServe(":3000", nil)
+	// http.HandleFunc("/", welcome)
+	// http.ListenAndServe(":3000", nil)
+	s := []int{1, 2}
+	s = append(s, 3)
+	fmt.Println(s == nil, len(s), cap(s), s[3])
 }
