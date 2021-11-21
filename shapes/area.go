@@ -11,7 +11,7 @@ type Cirlce struct {
 	radius float64
 }
 
-type shape interface {
+type Shape interface {
 	Area() float64
 }
 
