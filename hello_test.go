@@ -6,6 +6,14 @@ import (
 	"testing"
 )
 
+func Test_hello_2(t *testing.T) {
+	t.Run("test 2", func(t *testing.T) {
+		if got := hello2(""); got != "asd" {
+			t.Errorf("hello() = %v, want %v", got, "asd")
+		}
+	})
+}
+
 func Test_hello(t *testing.T) {
 	type args struct {
 		name string
@@ -23,6 +31,34 @@ func Test_hello(t *testing.T) {
 			},
 			"Hello, what's your name?",
 		}, {
+			"2",
+			args{
+				"thuan",
+			},
+			"Hello thuan",
+		},
+		{
+			"2",
+			args{
+				"thuan",
+			},
+			"Hello thuan",
+		},
+		{
+			"2",
+			args{
+				"thuan",
+			},
+			"Hello thuan",
+		},
+		{
+			"2",
+			args{
+				"thuan",
+			},
+			"Hello thuan",
+		},
+		{
 			"2",
 			args{
 				"thuan",

@@ -15,7 +15,7 @@ type Product struct {
 	Price uint
 }
 
-func hello(name string) string {
+func hello2(name string) string {
 	if name == "" {
 		return "Hello, what's your name?"
 	} else {
@@ -23,20 +23,20 @@ func hello(name string) string {
 	}
 }
 
-func welcome(w http.ResponseWriter, r *http.Request) {
+func welcome2(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprintln(w, "Hello world")
 }
 
-func New(a string) string {
+func New2(a string) string {
 	return a
 }
 
 var logger *zap.Logger
 
-func main() {
-	InitLogger()
-}
+// func main() {
+// 	InitLogger()
+// }
 
 type foo struct {
 	One string
