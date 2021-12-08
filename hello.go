@@ -5,6 +5,13 @@ import (
 	"net/http"
 )
 
+func hello3(name string) string {
+	if name == "" {
+		return "Hello, what's your name?"
+	} else {
+		return fmt.Sprintf("Hello %s", name)
+	}
+}
 func hello(name string) string {
 	if name == "" {
 		return "Hello, what's your name?"
